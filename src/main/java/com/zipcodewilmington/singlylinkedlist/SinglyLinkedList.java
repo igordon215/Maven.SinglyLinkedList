@@ -1,5 +1,7 @@
 package com.zipcodewilmington.singlylinkedlist;
 
+import java.net.BindException;
+
 /**
  * Created by leon on 1/10/18.
  */
@@ -30,4 +32,28 @@ public class SinglyLinkedList<Type extends Comparable<Type>> {
         }
         return counter;
     }
+
+    public void removeNode(int index) {
+        if (index == 0 && head.next != null) {
+            head = head.next;
+        }
+
+        if (index == 0 && head.next == null) {
+            head = null;
+        }
+
+        Node<Type> current = head;
+        Node<Type> previous = head;
+        int counter = 0;
+
+        while (current != null && counter != index) {
+            previous = current;
+            current = current.next;
+            counter++;
+        }
+        if (head != null) {
+            previous.next = current.next;
+        }
+    }
+
 }

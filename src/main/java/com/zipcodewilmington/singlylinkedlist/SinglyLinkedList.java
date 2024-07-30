@@ -105,4 +105,42 @@ public class SinglyLinkedList<Type extends Comparable<Type>> {
         }
         return newList;
     }
+
+    public SinglyLinkedList<Type> sort(SinglyLinkedList<Type> original) {
+        Node<Type> current = original.head;
+        Node<Type> index;
+        Type temp;
+
+        if (current == null) {return null;}
+
+        while (current != null) {
+            index = current.next;
+
+            while (index != null) {
+                if (current.data.compareTo(index.data) > 0) {
+                    temp = current.data;
+                    current.data = index.data;
+                    index.data = temp;
+                }
+                index = index.next;
+            }
+            current = current.next;
+        }
+        return original;
+    }
+
+    public SinglyLinkedList<Type> reverse(SinglyLinkedList<Type> original) {
+        Node<Type> previous = null;
+        Node<Type> next;
+        Node<Type> current = original.head;
+
+        while (current != null) {
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        original.head = previous;
+        return original;
+    }
 }

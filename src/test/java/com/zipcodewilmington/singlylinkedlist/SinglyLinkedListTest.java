@@ -206,5 +206,65 @@ public class SinglyLinkedListTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void sortTest() {
+        //Given
+        SinglyLinkedList<String> singLL = new SinglyLinkedList<String>();
+        singLL.addNode("Goku");
+        singLL.addNode("Gohan");
+        singLL.addNode("Roshi");
+        singLL.addNode("Vegeta");
+        singLL.addNode("Krillin");
+        singLL.addNode("Piccolo");
+        //When
+        SinglyLinkedList<String> sortList = singLL.sort(singLL);
+        String expected = "Piccolo";
+        String actual = sortList.get(3);
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void sortIntegerTest() {
+        //Given
+        SinglyLinkedList<Integer> singLL = new SinglyLinkedList<Integer>();
+        singLL.addNode(16);
+        singLL.addNode(120);
+        singLL.addNode(8);
+        singLL.addNode(3);
+        singLL.addNode(29);
+        singLL.addNode(265);
+        singLL.addNode(97);
+        singLL.addNode(155);
+        //When
+        SinglyLinkedList<Integer> sortList = singLL.sort(singLL);
+        int expected = 97;
+        int actual = sortList.get(4);
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void reverseTest() {
+        //Given
+        SinglyLinkedList<Integer> singLL = new SinglyLinkedList<Integer>();
+        singLL.addNode(16);
+        singLL.addNode(120);
+        singLL.addNode(8);
+        singLL.addNode(3);
+        singLL.addNode(29);
+        singLL.addNode(265);
+        singLL.addNode(97);
+        singLL.addNode(155);
+        //When
+        SinglyLinkedList<Integer> sortList = singLL.reverse(singLL);
+        int expected = 155;
+        int actual = sortList.get(0);
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
+
+
+
 
 }

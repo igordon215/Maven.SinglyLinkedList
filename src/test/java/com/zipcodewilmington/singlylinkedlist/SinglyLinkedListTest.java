@@ -119,5 +119,56 @@ public class SinglyLinkedListTest {
 
     }
 
+    @Test
+    public void findStringTest() {
+        //Given
+        SinglyLinkedList<String> singLL = new SinglyLinkedList<String>();
+        singLL.addNode("Goku");
+        singLL.addNode("Gohan");
+        singLL.addNode("Roshi");
+        singLL.addNode("Vegeta");
+        singLL.addNode("Krillin");
+        singLL.addNode("Piccolo");
+        //When
+        int expected = 3;
+        int actual = singLL.find("Vegeta");
+        //Then
+        Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void notInStringTest() {
+        //Given
+        SinglyLinkedList<String> singLL = new SinglyLinkedList<String>();
+        singLL.addNode("Goku");
+        singLL.addNode("Gohan");
+        singLL.addNode("Roshi");
+        singLL.addNode("Vegeta");
+        singLL.addNode("Krillin");
+        singLL.addNode("Piccolo");
+        //When
+        int expected = -1;
+        int actual = singLL.find("Cell");
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getTest() {
+        //Given
+        SinglyLinkedList<String> singLL = new SinglyLinkedList<String>();
+        singLL.addNode("Goku");
+        singLL.addNode("Gohan");
+        singLL.addNode("Roshi");
+        singLL.addNode("Vegeta");
+        singLL.addNode("Krillin");
+        singLL.addNode("Piccolo");
+        //When
+        String expected = "Piccolo";
+        String actual = singLL.get(5);
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
 
 }

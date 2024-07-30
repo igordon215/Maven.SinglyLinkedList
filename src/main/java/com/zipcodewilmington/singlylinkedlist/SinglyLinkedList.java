@@ -60,8 +60,10 @@ public class SinglyLinkedList<Type extends Comparable<Type>> {
         Node<Type> current = head;
 
         while (current != null) {
-            if (current.data.equals(element)) {return true;}
-                current = current.next;
+            if (current.data.equals(element)) {
+                return true;
+            }
+            current = current.next;
         }
         return false;
     }
@@ -70,12 +72,26 @@ public class SinglyLinkedList<Type extends Comparable<Type>> {
         int counter = 0;
         Node<Type> current = head;
 
-        while(current != null && !current.data.equals(element)) {
+        while (current != null && !current.data.equals(element)) {
             current = current.next;
             counter++;
         }
-        if(current == null) {
+        if (current == null) {
             return -1;
         } else return counter;
+    }
+
+    public Type get(int index) {
+        int coutner = 0;
+        Node<Type> current = head;
+
+        while (current != null) {
+            if (coutner == index) {
+                return current.data;
+            }
+            current = current.next;
+            coutner++;
+        }
+        return null;
     }
 }

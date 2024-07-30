@@ -65,4 +65,17 @@ public class SinglyLinkedList<Type extends Comparable<Type>> {
         }
         return false;
     }
+
+    public int find(Type element) {
+        int counter = 0;
+        Node<Type> current = head;
+
+        while(current != null && !current.data.equals(element)) {
+            current = current.next;
+            counter++;
+        }
+        if(current == null) {
+            return -1;
+        } else return counter;
+    }
 }

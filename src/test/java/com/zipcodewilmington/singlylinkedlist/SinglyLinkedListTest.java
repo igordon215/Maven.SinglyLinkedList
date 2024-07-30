@@ -104,6 +104,20 @@ public class SinglyLinkedListTest {
         Assert.assertFalse(actual);
     }
 
-    
+    @Test
+    public void findTest() {
+        //Given
+        SinglyLinkedList<Integer> singLL = new SinglyLinkedList<Integer>();
+        singLL.addNode(3);
+        singLL.addNode(6);
+        singLL.addNode(9);
+        //When
+        int expected = 2;
+        int actual = singLL.find(9);
+        //Then
+        Assert.assertEquals(expected, actual);
+
+    }
+
 
 }

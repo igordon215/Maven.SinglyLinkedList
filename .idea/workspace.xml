@@ -225,9 +225,11 @@
     "JUnit.SinglyLinkedListTest.ContainsNodeFalseTest.executor": "Run",
     "JUnit.SinglyLinkedListTest.addNodeTest.executor": "Run",
     "JUnit.SinglyLinkedListTest.containsTest.executor": "Run",
+    "JUnit.SinglyLinkedListTest.copyTest.executor": "Run",
     "JUnit.SinglyLinkedListTest.executor": "Run",
     "JUnit.SinglyLinkedListTest.findStringTest.executor": "Run",
     "JUnit.SinglyLinkedListTest.findTest.executor": "Run",
+    "JUnit.SinglyLinkedListTest.getNullTest.executor": "Run",
     "JUnit.SinglyLinkedListTest.getTest.executor": "Run",
     "JUnit.SinglyLinkedListTest.notInStringTest.executor": "Run",
     "JUnit.SinglyLinkedListTest.removeFirstNode.executor": "Run",
@@ -240,7 +242,7 @@
     "last_opened_file_path": "/Users/ian/Projects/Maven.SinglyLinkedList"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.SinglyLinkedListTest.getTest">
+  <component name="RunManager" selected="JUnit.SinglyLinkedListTest.copyTest">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -330,7 +332,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglyLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest.copyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="singlylinkedlist" />
       <extension name="coverage">
         <pattern>
@@ -340,7 +342,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
       <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="copyTest" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -363,7 +366,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglyLinkedListTest.findTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest.getNullTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="singlylinkedlist" />
       <extension name="coverage">
         <pattern>
@@ -373,7 +376,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
       <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="findTest" />
+      <option name="METHOD_NAME" value="getNullTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -438,11 +441,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SinglyLinkedListTest.copyTest" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.getNullTest" />
         <item itemvalue="JUnit.SinglyLinkedListTest.getTest" />
         <item itemvalue="JUnit.SinglyLinkedListTest.notInStringTest" />
         <item itemvalue="JUnit.SinglyLinkedListTest.findStringTest" />
-        <item itemvalue="JUnit.SinglyLinkedListTest" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.findTest" />
       </list>
     </recent_temporary>
   </component>

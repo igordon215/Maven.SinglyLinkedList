@@ -171,4 +171,40 @@ public class SinglyLinkedListTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void getNullTest() {
+        //Given
+        SinglyLinkedList<String> singLL = new SinglyLinkedList<String>();
+        singLL.addNode("Goku");
+        singLL.addNode("Gohan");
+        singLL.addNode("Roshi");
+        singLL.addNode("Vegeta");
+        singLL.addNode("Krillin");
+        singLL.addNode("Piccolo");
+        //When
+        String expected = null;
+        String actual = singLL.get(6);
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void copyTest() {
+        //Given
+        SinglyLinkedList<String> singLL = new SinglyLinkedList<String>();
+        singLL.addNode("Goku");
+        singLL.addNode("Gohan");
+        singLL.addNode("Roshi");
+        singLL.addNode("Vegeta");
+        singLL.addNode("Krillin");
+        singLL.addNode("Piccolo");
+        //When
+        SinglyLinkedList<String> copy = singLL.copy(singLL);
+        String expected = singLL.get(1);
+        String actual = copy.get(1);
+        //Then
+        Assert.assertEquals(expected, actual);
+    }
+
+
 }

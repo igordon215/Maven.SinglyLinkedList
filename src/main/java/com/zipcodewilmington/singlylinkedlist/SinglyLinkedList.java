@@ -94,4 +94,15 @@ public class SinglyLinkedList<Type extends Comparable<Type>> {
         }
         return null;
     }
+
+    public SinglyLinkedList<Type> copy(SinglyLinkedList<Type> original) {
+        SinglyLinkedList<Type> newList = new SinglyLinkedList<Type>();
+        Node<Type> current = original.head;
+
+        while (current != null) {
+            newList.addNode(current.data);
+            current = current.next;
+        }
+        return newList;
+    }
 }

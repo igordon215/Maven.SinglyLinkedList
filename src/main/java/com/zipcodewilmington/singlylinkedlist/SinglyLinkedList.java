@@ -56,4 +56,13 @@ public class SinglyLinkedList<Type extends Comparable<Type>> {
         }
     }
 
+    public boolean contains(Type element) {
+        Node<Type> current = head;
+
+        while (current != null) {
+            if (current.data.equals(element)) {return true;}
+                current = current.next;
+        }
+        return false;
+    }
 }

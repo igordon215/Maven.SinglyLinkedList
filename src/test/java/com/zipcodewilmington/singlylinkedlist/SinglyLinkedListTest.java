@@ -78,4 +78,32 @@ public class SinglyLinkedListTest {
         Assert.assertEquals(0, singLL.size());
     }
 
+    @Test
+    public void containsTest() {
+        //Given
+        SinglyLinkedList<Integer> singLL = new SinglyLinkedList<Integer>();
+        singLL.addNode(3);
+        singLL.addNode(6);
+        singLL.addNode(9);
+        //When
+        boolean actual = singLL.contains(9);
+        //Then
+        Assert.assertTrue(singLL.contains(9));
+    }
+
+    @Test
+    public void ContainsNodeFalseTest() {
+        //Given
+        SinglyLinkedList<Integer> singLL = new SinglyLinkedList<Integer>();
+        singLL.addNode(3);
+        singLL.addNode(6);
+        singLL.addNode(9);
+        //When
+        boolean actual = singLL.contains(11);
+        //Then
+        Assert.assertFalse(actual);
+    }
+
+    
+
 }
